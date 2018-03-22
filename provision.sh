@@ -4,6 +4,22 @@ set -e
 # Print the commands as they are executed
 set -x
 
+
+
+# Improves on this: https://github.com/martinanderssondotcom/box-ubuntu-budgie-17-x64/issues/3
+DIR=/etc/systemd/system/apt-daily.timer.d
+mkdir $DIR
+
+echo '[Timer]
+OnCalendar=
+OnBootSec=15min
+OnUnitActiveSec=1d
+AccuracySec=1h
+RandomizedDelaySec=30min
+Persistent=false' > $DIR/delayed-start-after-boot.conf
+
+
+
 # Authorize Vagrant's insecure public SSH key
 mkdir /home/vagrant/.ssh/
 chmod 700 /home/vagrant/.ssh/
@@ -17,9 +33,13 @@ echo root:vagrant | chpasswd
 # Passwordless sudo
 echo '\nvagrant ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
+
+
 # Update/upgrade
 apt-get update
 apt-get full-upgrade -y
+
+
 
 # Delete stuff
 apt-get --purge autoremove
