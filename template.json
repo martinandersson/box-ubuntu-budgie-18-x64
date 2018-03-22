@@ -1,0 +1,118 @@
+{
+    "_comment": "My condolences for all the copy-pasting in this file..",
+    
+    "builders": [{
+        "type": "virtualbox-iso",
+        "guest_os_type": "Ubuntu_64",
+        "iso_url": "http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/bionic-desktop-amd64.iso",
+        "iso_checksum_url": "http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/MD5SUMS",
+        "iso_checksum_type": "md5",
+        "vboxmanage": [
+            ["modifyvm", "{{.Name}}",
+             "--cpus", "2",
+             "--memory", "4096",
+             "--vram", "256",
+             "--audioout", "on"]
+        ],
+        "boot_wait": "3m",
+        "boot_command": [
+            "<tab><wait><tab><wait><enter><wait10>",
+            "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<spacebar><wait><tab><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<tab><wait><enter><wait10><wait10>",
+            "<tab><wait>New York<wait><tab><wait><tab><wait><enter><wait10>",
+            "Vagrant<tab><wait>ubuntu-budgie-18<tab><wait><tab><wait>vagrant<tab><wait>vagrant<tab><wait><up><wait><tab><wait><tab><wait><enter>",
+            
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            
+            "<enter>",
+            
+            "<wait10><wait10><wait10><wait10>",
+            
+            "<enter>"
+        ],
+        "ssh_timeout": "60m",
+        "ssh_username": "vagrant",
+        "ssh_password": "vagrant",
+        "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now"
+    },{
+        "type": "vmware-iso",
+        "version": "14",
+        "guest_os_type": "ubuntu-64",
+        "iso_url": "http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/bionic-desktop-amd64.iso",
+        "iso_checksum_url": "http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/MD5SUMS",
+        "iso_checksum_type": "md5",
+        "vmx_data": {
+            "numvcpus": "2",
+            "cpuid.coresPerSocket": "2",
+            "memsize": "4096",
+            "svga.graphicsMemoryKB": "786432",
+            "mks.enable3d": "TRUE"
+        },
+        "sound": true,
+        "boot_wait": "3m",
+        "boot_command": [
+            "<tab><wait><tab><wait><enter><wait10>",
+            "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<spacebar><wait><tab><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<tab><wait><enter><wait10><wait10>",
+            "<tab><wait>New York<wait><tab><wait><tab><wait><enter><wait10>",
+            "Vagrant<tab><wait>ubuntu-budgie-18<tab><wait><tab><wait>vagrant<tab><wait>vagrant<tab><wait><up><wait><tab><wait><tab><wait><enter>",
+            
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10><wait10>",
+            
+            "<enter>",
+            
+            "<wait10><wait10><wait10><wait10>",
+            
+            "<enter>"
+        ],
+        "tools_upload_flavor": "linux",
+        "ssh_timeout": "60m",
+        "ssh_username": "vagrant",
+        "ssh_password": "vagrant",
+        "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now" }],
+    
+    "provisioners": [{
+        "type": "shell",
+        "only": ["virtualbox-iso"],
+        "script": "vbox/provision.sh",
+        "execute_command": "echo 'vagrant' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'" },{
+        
+        "type": "shell",
+        "only": ["vmware-iso"],
+        "script": "vmware/provision.sh",
+        "execute_command": "echo 'vagrant' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'" },{
+        
+        "type": "shell",
+        "script": "provision.sh",
+        "execute_command": "echo 'vagrant' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'" }],
+    
+    "post-processors": [{
+        "type": "vagrant",
+        "override": {
+            "virtualbox": {"vagrantfile_template": "vbox/Vagrantfile"},
+            "vmware":     {"vagrantfile_template": "vmware/Vagrantfile"}
+        }
+    }]
+}
