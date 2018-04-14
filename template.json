@@ -1,6 +1,13 @@
 {
     "_comment": "My condolences for all the copy-pasting in this file..",
     
+    "variables": {
+        "cpus": "2",
+        "memory_mb": "4096",
+        "vbox_videomem_mb": "256",
+        "vmware_videomem_kb": "786432"
+    },
+    
     "builders": [{
         "type": "virtualbox-iso",
         "guest_os_type": "Ubuntu_64",
@@ -9,9 +16,9 @@
         "iso_checksum_type": "md5",
         "vboxmanage": [
             ["modifyvm", "{{.Name}}",
-             "--cpus", "2",
-             "--memory", "4096",
-             "--vram", "256",
+             "--cpus", "{{user `cpus`}}",
+             "--memory", "{{user `memory_mb`}}",
+             "--vram", "{{user `vbox_videomem_mb`}}",
              "--audioout", "on"]
         ],
         "boot_wait": "3m",
@@ -64,10 +71,10 @@
         "iso_checksum_url": "http://cdimage.ubuntu.com/ubuntu-budgie/daily-live/current/MD5SUMS",
         "iso_checksum_type": "md5",
         "vmx_data": {
-            "numvcpus": "2",
-            "cpuid.coresPerSocket": "2",
-            "memsize": "4096",
-            "svga.graphicsMemoryKB": "786432",
+            "numvcpus": "{{user `cpus`}}",
+            "cpuid.coresPerSocket": "1",
+            "memsize": "{{user `memory_mb`}}",
+            "svga.graphicsMemoryKB": "{{user `vmware_videomem_kb`}}",
             "mks.enable3d": "TRUE"
         },
         "sound": true,
