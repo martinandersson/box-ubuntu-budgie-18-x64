@@ -26,7 +26,7 @@ change.
 
 [unreleased-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v4.0.2...HEAD
 
-## [4.0.2][402-1] - 2018-04-14
+## [4.0.2][402-1] - 2018-04-15
 
 ### Added
 
