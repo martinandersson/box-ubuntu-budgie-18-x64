@@ -16,9 +16,14 @@
         ],
         "boot_wait": "3m",
         "boot_command": [
-            "<tab><wait><tab><wait><enter><wait10>",
+            "<leftCtrlOn><leftAltOn>t<leftAltOff><leftCtrlOff><wait10>",
+            "cd /home/ubuntu-budgie/Desktop<enter><wait>",
+            "gtk-launch ubiquity.desktop && exit<enter><wait10><wait10><wait10><wait10>",
+            
+            "<tab><enter><wait10>",
+            
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
-            "<spacebar><wait><tab><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><enter><wait10><wait10>",
             "<tab><wait>New York<wait><tab><wait><tab><wait><enter><wait10>",
@@ -37,11 +42,17 @@
             
             "<enter>",
             
-            "<wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10>",
             
-            "<enter>"
+            "<enter>",
+            
+            "<wait10><wait10><wait10><wait10><wait10>",
+            
+            "<leftCtrlOn><leftAltOn>t<leftAltOff><leftCtrlOff><wait10>",
+            
+            "echo 'vagrant' | sudo -S apt-get install -y openssh-server && exit<enter>"
         ],
-        "ssh_timeout": "60m",
+        "ssh_timeout": "5m",
         "ssh_username": "vagrant",
         "ssh_password": "vagrant",
         "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now"
@@ -62,9 +73,14 @@
         "sound": true,
         "boot_wait": "3m",
         "boot_command": [
-            "<tab><wait><tab><wait><enter><wait10>",
+            "<leftCtrlOn><leftAltOn>t<leftAltOff><leftCtrlOff><wait10>",
+            "cd /home/ubuntu-budgie/Desktop<enter><wait>",
+            "gtk-launch ubiquity.desktop && exit<enter><wait10><wait10><wait10><wait10>",
+            
+            "<tab><enter><wait10>",
+            
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
-            "<spacebar><wait><tab><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
+            "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><enter><wait10><wait10>",
             "<tab><wait>New York<wait><tab><wait><tab><wait><enter><wait10>",
@@ -83,12 +99,18 @@
             
             "<enter>",
             
-            "<wait10><wait10><wait10><wait10>",
+            "<wait10><wait10><wait10><wait10><wait10>",
             
-            "<enter>"
+            "<enter>",
+            
+            "<wait10><wait10><wait10><wait10><wait10>",
+            
+            "<leftCtrlOn><leftAltOn>t<leftAltOff><leftCtrlOff><wait10>",
+            
+            "echo 'vagrant' | sudo -S apt-get install -y openssh-server && exit<enter>"
         ],
         "tools_upload_flavor": "linux",
-        "ssh_timeout": "60m",
+        "ssh_timeout": "5m",
         "ssh_username": "vagrant",
         "ssh_password": "vagrant",
         "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now" }],
