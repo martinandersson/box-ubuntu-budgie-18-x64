@@ -37,7 +37,7 @@ change.
 - Ubuntu version: `18.04 (development branch)`
 - Budgie version: `10.4`
 - Linux Kernel: `4.15.0-15-generic`
-- VirtualBox Guest Additions: `?`
+- VirtualBox Guest Additions: `5.2.8r121009`
 - VMware Tools: `10.2.0.7047 (build-7259539)`
 - Built with Packer: `1.2.2`
 - ..on host: `Windows Pro 10.0.16299 Build 16299`
