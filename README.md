@@ -1,7 +1,60 @@
 # A Vagrant box with Ubuntu Budgie 18 (x64)
 
-Stay tuned! Ultra alpha work in progress. In particular, more docs will arrive shortly.
+The artifacts of this project are two `.box` files with
+[Ubuntu Budgie 18][intro-1] installed; one file for the [VirtualBox][intro-3]
+provider, and one for [VMware][intro-4].
 
-Box uploaded to Vagrant's cloud as [`pristine/ubuntu-budgie-18-x64`][1].
+You don't have to run weird-ass Linux commands to get the artifacts. They are
+already built and uploaded [manually] to Vagrant's cloud as
+[`pristine/ubuntu-budgie-18-x64`][intro-2]<sup>1</sup>. 
 
-[1]: https://app.vagrantup.com/pristine/boxes/ubuntu-budgie-18-x64
+_This GitHub project_ is used as 1) an issue tracker, 2) changelog and 3) as an
+authoritative source on how exactly the box was built.
+
+<sub><sup>1</sup> The semantical concept captured here is elsewhere described as
+a "minimal" and/or "base" box. I refrain from using either term since 1.45 GB
+is hardly "minimal" nor am I convinced that all use-cases of this box are to
+derive yet another box as implied by the word "base". We are building a box.
+Period.</sub>
+
+[intro-1]: https://ubuntubudgie.org/
+[intro-2]: https://app.vagrantup.com/pristine/boxes/ubuntu-budgie-18-x64
+[intro-3]: https://www.vagrantup.com/docs/virtualbox/
+[intro-4]: https://www.vagrantup.com/docs/vmware/
+
+## Using the box
+
+Make sure you have [Vagrant][using-1] and at least one of the supported VM
+providers installed<sup>2</sup>, then in theory, all you should have to do in
+order to get a Virtual Machine up and running with Ubuntu Budgie 18 is:
+
+    vagrant init pristine/ubuntu-budgie-18-x64
+    vagrant up
+
+**Be warned**: Vagrant `2.0.3` has severe [issues][using-2] and Vagrant `2.0.2`
+is recommended until they get their shit together.
+
+<sub><sup>2</sup> Can not really recommend anyone. Both VirtualBox and VMware
+suck equally much. Okay, VMware sucks a little bit less.
+
+[using-1]: https://www.vagrantup.com
+[using-2]: https://github.com/hashicorp/vagrant/issues/9596#issuecomment-375393510
+
+## For developers
+
+To build the boxes using [Packer][dev-1], do this:
+
+    packer build template.json
+
+Or, one provider at a time:
+
+    packer build -only virtualbox-iso template.json
+
+..best of luck to you. `template.json`'s "boot command" uses VNC to literally
+click on the installer's GUI buttons in order to install the OS. This procedure
+is extremely host-machine dependent with wait-settings tailored to my particular 
+hardware. I.e., I would be surprised if you can run the previously quoted
+commands without any issues. In fact, I can't even do that. It only works half
+of the times for me.
+
+[dev-1]: http://packer.io
