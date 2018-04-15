@@ -32,7 +32,7 @@ change.
 
 - This changelog.
 
-### Finally reporting
+### Software
 
 - Ubuntu version: `18.04 (development branch)`
 - Budgie version: `10.4`
@@ -50,9 +50,29 @@ change.
 
 - [issue martinanderssondotcom/box-ubuntu-budgie-17-x64#3][401-2]
 
+### Software
+
+- Ubuntu version: `18.04 (development branch)`
+- Budgie version: `10.4`
+- Linux Kernel: `4.15.0-12-generic`
+- VirtualBox Guest Additions: `5.2.8r121009`
+- VMware Tools: `10.2.0.7047 (build-7259539)`
+- Built with Packer: `1.2.1`
+- ..on host: `Windows Pro 10.0.16299 Build 16299`
+
 [401-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v4.0.0...v4.0.1
 [401-2]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-17-x64/issues/3
 
 ## 4.0.0 - 2018-03-22
 
 Initial release.
+
+### Software
+
+- Ubuntu version: `18.04 (development branch)`
+- Budgie version: `10.4`
+- Linux Kernel: `4.15.0-12-generic`
+- VirtualBox Guest Additions: `5.2.8r121009`
+- VMware Tools: `10.2.0.7047 (build-7259539)`
+- Built with Packer: `1.2.1`
+- ..on host: `Windows Pro 10.0.16299 Build 16299`
