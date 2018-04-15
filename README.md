@@ -40,7 +40,7 @@ suck equally much. Okay, VMware sucks a little bit less.
 [using-1]: https://www.vagrantup.com
 [using-2]: https://github.com/hashicorp/vagrant/issues/9596#issuecomment-375393510
 
-## For developers
+## Building the box
 
 To build the boxes using [Packer][dev-1], do this:
 
