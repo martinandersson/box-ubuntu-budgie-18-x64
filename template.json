@@ -23,11 +23,7 @@
         ],
         "boot_wait": "3m",
         "boot_command": [
-            "<leftCtrlOn><leftAltOn>t<leftAltOff><leftCtrlOff><wait10>",
-            "cd /home/ubuntu-budgie/Desktop<enter><wait>",
-            "gtk-launch ubiquity.desktop && exit<enter><wait10><wait10><wait10><wait10>",
-            
-            "<tab><enter><wait10>",
+            "<tab><tab><enter><wait10>",
             
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
@@ -80,11 +76,7 @@
         "sound": true,
         "boot_wait": "3m",
         "boot_command": [
-            "<leftCtrlOn><leftAltOn>t<leftAltOff><leftCtrlOff><wait10>",
-            "cd /home/ubuntu-budgie/Desktop<enter><wait>",
-            "gtk-launch ubiquity.desktop && exit<enter><wait10><wait10><wait10><wait10>",
-            
-            "<tab><enter><wait10>",
+            "<tab><tab><enter><wait10>",
             
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
