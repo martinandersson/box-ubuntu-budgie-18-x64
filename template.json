@@ -25,7 +25,6 @@
         "boot_command": [
             "<tab><tab><enter><wait10>",
             
-            "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><enter><wait10><wait10>",
@@ -79,7 +78,6 @@
         "boot_command": [
             "<tab><tab><enter><wait10>",
             
-            "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><enter><wait10><wait10>",
