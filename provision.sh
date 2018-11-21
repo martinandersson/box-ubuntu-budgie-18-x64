@@ -42,7 +42,7 @@ apt-get full-upgrade -y
 
 
 # Delete stuff
-apt-get --purge autoremove
+apt-get --purge autoremove -y
 apt-get clean
 
 rm -rf /var/log/*
