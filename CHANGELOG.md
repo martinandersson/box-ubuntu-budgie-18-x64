@@ -24,7 +24,27 @@ change.
 
 - Nothing, yet.
 
-[unreleased-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v10.0.1...HEAD
+[unreleased-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v10.1.0...HEAD
+
+## [10.1.0][1010-1] - 2018-11-20
+
+### Changed
+
+- VMware's "[Hardware version][1010-2]" from `14` to `16`; this ought to require
+  Workstation 15
+
+### Software
+
+- Ubuntu version: `18.10`
+- Budgie version: `10.4`
+- Linux Kernel: `4.18.0-11-generic`
+- VirtualBox Guest Additions: `5.2.22r126460`
+- VMware Tools: `10.3.2.6765 (build-9925305)`
+- Built with Packer: `1.3.2`
+- ..on host: `Windows Pro 10.0.17134 Build 17134`
+
+[1010-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v10.0.1...v10.1.0
+[1010-2]: https://kb.vmware.com/s/article/1003746
 
 ## [10.0.1][1001-1] - 2018-08-25
 
