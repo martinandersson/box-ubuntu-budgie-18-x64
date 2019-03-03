@@ -8,7 +8,7 @@ Versioning semi-adheres to [Semantic Versioning][changelog-2], accordingly:
 *Ubuntu-Minor.Box-Major.Box-Minor*.
 
 A new Ubuntu release will bump the first digit (we're currently at Ubuntu
-18.**04**). A new version of this Vagrant box will bump either or both of the
+18.**10**). A new version of this Vagrant box will bump either or both of the
 last two digits.
 
 Box updates do not add additional software unless strictly necessary for bug
