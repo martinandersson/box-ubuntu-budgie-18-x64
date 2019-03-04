@@ -21,7 +21,7 @@
              "--vram", "{{user `vbox_videomem_mb`}}",
              "--audioout", "on"]
         ],
-        "boot_wait": "2m",
+        "boot_wait": "3m",
         "boot_command": [
             "<tab><wait><tab><wait><enter><wait10>",
             
@@ -80,7 +80,7 @@
             "mks.enable3d": "TRUE"
         },
         "sound": true,
-        "boot_wait": "2m",
+        "boot_wait": "3m",
         "boot_command": [
             "<tab><wait><tab><wait><enter><wait10>",
             
