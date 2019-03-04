@@ -28,8 +28,8 @@
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
-            "<tab><wait><enter><wait10><wait10>",
-            "<tab><wait><wait>New York<wait5><tab><wait><wait><tab><wait><tab><wait><enter><wait10><wait10>",
+            "<tab><wait><enter><wait10><wait10><wait10>",
+            "<tab><wait><wait>New York<wait5><tab><wait><wait><tab><wait><enter><wait10><wait10>",
             "Vagrant<tab><wait>ubuntu-budgie-18<tab><wait><tab><wait>vagrant<tab><wait>vagrant<tab><wait><up><wait><tab><wait><tab><wait><enter>",
             
             "<wait10><wait10><wait10><wait10><wait10><wait10>",
@@ -87,8 +87,8 @@
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<down><wait><tab><wait><spacebar><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
             "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter><wait10>",
-            "<tab><wait><enter><wait10><wait10>",
-            "<tab><wait><wait>New York<wait5><tab><wait><wait><tab><wait><tab><wait><enter><wait10><wait10>",
+            "<tab><wait><enter><wait10><wait10><wait10>",
+            "<tab><wait><wait>New York<wait5><tab><wait><wait><tab><wait><enter><wait10><wait10>",
             "Vagrant<tab><wait>ubuntu-budgie-18<tab><wait><tab><wait>vagrant<tab><wait>vagrant<tab><wait><up><wait><tab><wait><tab><wait><enter>",
             
             "<wait10><wait10><wait10><wait10><wait10><wait10>",
