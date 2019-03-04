@@ -31,9 +31,6 @@ order to get a Virtual Machine up and running with Ubuntu Budgie 18 is:
     vagrant init pristine/ubuntu-budgie-18-x64
     vagrant up
 
-**Be warned**: Vagrant has inadequate support for VMware (see this
-[issue][using-2]).
-
 <sub><sup>2</sup> Can not really recommend anyone. Both VirtualBox and VMware
 suck equally much. Okay, VMware sucks a little bit less.
 
