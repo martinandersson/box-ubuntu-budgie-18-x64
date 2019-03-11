@@ -35,7 +35,6 @@ order to get a Virtual Machine up and running with Ubuntu Budgie 18 is:
 suck equally much. Okay, VMware sucks a little bit less.
 
 [using-1]: https://www.vagrantup.com
-[using-2]: https://github.com/hashicorp/vagrant/issues/9726
 
 ## Building the box
 
