@@ -73,6 +73,7 @@
         "iso_url": "http://cdimage.ubuntu.com/ubuntu-budgie/releases/18.10/release/ubuntu-budgie-18.10-desktop-amd64.iso",
         "iso_checksum_url": "http://cdimage.ubuntu.com/ubuntu-budgie/releases/18.10/release/MD5SUMS",
         "iso_checksum_type": "md5",
+        "vmx_remove_ethernet_interfaces": "true",
         "vmx_data": {
             "numvcpus": "{{user `cpus`}}",
             "cpuid.coresPerSocket": "1",
