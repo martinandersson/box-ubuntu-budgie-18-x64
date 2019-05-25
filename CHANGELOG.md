@@ -24,7 +24,21 @@ change.
 
 - Nothing, yet.
 
-[unreleased-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v10.2.0...HEAD
+[unreleased-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v10.2.1...HEAD
+
+## [10.2.1][1021-1] - 2019-05-25
+
+### Software
+
+- Ubuntu version: `18.10`
+- Budgie version: `10.4`
+- Linux Kernel: `4.18.0-20-generic`
+- VirtualBox Guest Additions: `6.0.8r130520`
+- VMware Tools: `10.3.10.10540 (build-12406962)`
+- Built with Packer: `1.4.0`
+- ..on host: `Windows Pro 10.0.17763 Build 17763`
+
+[1021-1]: https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64/compare/v10.2.0...v10.2.1
 
 ## [10.2.0][1020-1] - 2019-03-04
 
